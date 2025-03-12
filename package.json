@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "mkdir -p build && cp -r * build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -17,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/DenNice-cloud/level99/issues"
   },
-  "homepage": "https://github.com/DenNice-cloud/level99"
+  "homepage": "https://github.com/DenNice-cloud/level99",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }
