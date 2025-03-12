@@ -1,0 +1,26 @@
+{
+  "name": "level99",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "mkdir -p build && cp -r * build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DenNice-cloud/level99.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/DenNice-cloud/level99/issues"
+  },
+  "homepage": "https://github.com/DenNice-cloud/level99",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
