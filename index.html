@@ -8,9 +8,10 @@
     />
     <title>Sombras del Destino</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="images/knight.png" type="image/x-icon" />
   </head>
 
-  <body class="">
+  <body class="scroll-smooth">
     <header class="bg-gray-800 py-6 px-6 md:px-12 text-white">
       <div class="flex justify-between items-center max-w-6xl mx-auto">
         <h1 class="text-3xl font-bold">Sombras del Destino</h1>
@@ -38,7 +39,7 @@
           >
           <a
             href="#subscribe"
-            class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600"
+            class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 hover:scale-105 duration-300"
             >Suscribirse
           </a>
         </nav>
@@ -77,7 +78,7 @@
         >
         <a
           href="#subscribe"
-          class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600"
+          class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 hover:scale-105 duration-300"
           >Suscribirse
         </a>
       </div>
@@ -101,9 +102,9 @@
     >
       <div class="flex-col md:flex-row flex items-center">
         <div class="md:max-w-[50%] text-center md:text-left">
-          <strong class="block text-lg py-2">Introducción</strong>
+          <strong class="text-lg py-2">Introducción</strong>
 
-          <p class="py-2">
+          <p class="py-2 mb-4">
             Bienvenido a "Sombras del Destino", un juego de rol y aventuras
             ambientado en un mundo oscuro y místico donde cada decisión cambia
             el curso de la historia. Explora, lucha y desentraña los secretos de
@@ -111,14 +112,17 @@
             móviles.
           </p>
 
-          <button
-            class="bg-green-500 text-white py-2 px-6 rounded-lg hover:bg-green-600 transition duration-300 mt-4"
+          <a
+            href="#subscribe"
+            class="bg-green-500 text-white py-2 px-6 rounded-lg hover:bg-green-600 mt-4 transition duration-300"
           >
             Jugar ahora
-          </button>
+          </a>
         </div>
 
-        <div class="w-full flex justify-center mt-6 md:mt-0">
+        <div
+          class="w-full flex justify-center mt-6 md:mt-0 hover:scale-105 duration-500"
+        >
           <img
             src="images/amidst_the_ruins.jpg"
             alt="Introduce photo"
@@ -132,8 +136,6 @@
       id="history"
       class="relative flex flex-col justify-center items-center overflow-hidden px-12 py-24 text-white"
     >
-      <div class="absolute z-[1] bg-black w-full h-full opacity-50"></div>
-
       <h2 class="z-[2] text-3xl font-semibold mb-4">Historia</h2>
 
       <p class="z-[2]">
@@ -144,8 +146,9 @@
         a la sombra?
       </p>
 
+      <div class="absolute z-[1] bg-black w-full h-full opacity-50"></div>
       <div
-        class="absolute inset-0 z-[-1] bg-cover bg-[center_top_-100px]"
+        class="absolute inset-0 z-[-1] bg-cover bg-[center_top_-100px] hover:scale-125 duration-500"
         style="background-image: url('images/be_ready_2.jpg')"
       ></div>
     </section>
@@ -159,8 +162,9 @@
       </h2>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-        <!-- Карточка 1 -->
-        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+        <div
+          class="hover:scale-110 duration-300 bg-white rounded-lg shadow-md p-6 text-center"
+        >
           <div class="text-4xl">🌍</div>
           <h3 class="font-bold text-lg mt-3">Exploración Dinámica</h3>
           <p class="text-gray-600 mt-2">
@@ -169,8 +173,9 @@
           </p>
         </div>
 
-        <!-- Карточка 2 -->
-        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+        <div
+          class="hover:scale-110 duration-300 bg-white rounded-lg shadow-md p-6 text-center"
+        >
           <div class="text-4xl">⚔️</div>
           <h3 class="font-bold text-lg mt-3">Combate Estratégico</h3>
           <p class="text-gray-600 mt-2">
@@ -179,8 +184,9 @@
           </p>
         </div>
 
-        <!-- Карточка 3 -->
-        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+        <div
+          class="hover:scale-110 duration-300 bg-white rounded-lg shadow-md p-6 text-center"
+        >
           <div class="text-4xl">🎭</div>
           <h3 class="font-bold text-lg mt-3">Elecciones con Consecuencias</h3>
           <p class="text-gray-600 mt-2">
@@ -189,8 +195,9 @@
           </p>
         </div>
 
-        <!-- Карточка 4 -->
-        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+        <div
+          class="hover:scale-110 duration-300 bg-white rounded-lg shadow-md p-6 text-center"
+        >
           <div class="text-4xl">🛠️</div>
           <h3 class="font-bold text-lg mt-3">Personalización de Personajes</h3>
           <p class="text-gray-600 mt-2">
@@ -198,8 +205,9 @@
           </p>
         </div>
 
-        <!-- Карточка 5 -->
-        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+        <div
+          class="hover:scale-110 duration-300 bg-white rounded-lg shadow-md p-6 text-center"
+        >
           <div class="text-4xl">👥</div>
           <h3 class="font-bold text-lg mt-3">Interacción Social</h3>
           <p class="text-gray-600 mt-2">
@@ -218,11 +226,11 @@
         Características Clave
       </h2>
 
-      <div class="flex-col md:flex-row flex items-center">
+      <div class="flex-col md:flex-row flex items-center ">
         <img
           src="images/two_warriors.jpg"
           alt="Key Features"
-          class="w-full md:max-w-lg rounded-lg"
+          class="w-full md:max-w-lg rounded-lg hover:scale-105 duration-500"
         />
 
         <ul class="mt-4 md:mt-0 md:ml-4">
@@ -305,7 +313,7 @@
           <div>
             <button
               type="submit"
-              class="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition duration-300"
+              class="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition hover:scale-105 duration-300"
             >
               Suscribirse
             </button>
