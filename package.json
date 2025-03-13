@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "mkdir -p build && cp -r * build",
+    "build": "mkdir build && cp -r * build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
