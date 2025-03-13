@@ -11,12 +11,97 @@
   </head>
 
   <body class="">
-    <header class="bg-gray-100 py-6 px-12">
-      <h1 class="text-4xl font-bold mb-12">Sombras del Destino</h1>
+    <header class="bg-gray-800 py-6 px-6 md:px-12 text-white">
+      <div class="flex justify-between items-center max-w-6xl mx-auto">
+        <h1 class="text-3xl font-bold">Sombras del Destino</h1>
 
-      <div class="flex items-center">
-        <div>
-          <strong class="py-2">Introducción</strong>
+        <nav class="hidden md:flex space-x-6 flex items-center">
+          <a
+            href="#history"
+            class="hover:text-green-500"
+            >Historia</a
+          >
+          <a
+            href="#mechanics"
+            class="hover:text-green-500"
+            >Mecánica</a
+          >
+          <a
+            href="#characters"
+            class="hover:text-green-500"
+            >Personajes
+          </a>
+          <a
+            href="#role-playing"
+            class="hover:text-green-500"
+            >Juegos de rol</a
+          >
+          <a
+            href="#subscribe"
+            class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600"
+            >Suscribirse
+          </a>
+        </nav>
+
+        <button
+          id="menu-btn"
+          class="md:hidden text-3xl"
+        >
+          ☰
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden flex flex-col items-center mt-4 space-y-4 md:hidden text-white"
+      >
+        <a
+          href="#history"
+          class="hover:text-green-500"
+          >Historia</a
+        >
+        <a
+          href="#mechanics"
+          class="hover:text-green-500"
+          >Mecánica</a
+        >
+        <a
+          href="#characters"
+          class="hover:text-green-500"
+          >Personajes
+        </a>
+        <a
+          href="#role-playing"
+          class="hover:text-green-500"
+          >Juegos de rol</a
+        >
+        <a
+          href="#subscribe"
+          class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600"
+          >Suscribirse
+        </a>
+      </div>
+
+      <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+        mobileMenu.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      </script>
+    </header>
+
+    <section
+      id="main"
+      class="py-6 px-12"
+    >
+      <div class="flex-col md:flex-row flex items-center">
+        <div class="md:max-w-[50%] text-center md:text-left">
+          <strong class="block text-lg py-2">Introducción</strong>
 
           <p class="py-2">
             Bienvenido a "Sombras del Destino", un juego de rol y aventuras
@@ -27,96 +112,135 @@
           </p>
 
           <button
-            class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300"
+            class="bg-green-500 text-white py-2 px-6 rounded-lg hover:bg-green-600 transition duration-300 mt-4"
           >
-            ,,Play now
+            Jugar ahora
           </button>
         </div>
 
-        <div class="flex px-[250px] py-[100px] bg-red-100 justify-center">
-          <span class="bg-black bg-opacity-50 text-white px-4 py-2 rounded-lg">
-            Photo
-          </span>
+        <div class="w-full flex justify-center mt-6 md:mt-0">
+          <img
+            src="/images/amidst_the_ruins.jpg"
+            alt="Introduce photo"
+            class="w-full md:max-w-lg rounded-lg"
+          />
         </div>
       </div>
-    </header>
+    </section>
 
     <section
-      id="historia"
-      class="py-12 px-12"
+      id="history"
+      class="relative flex flex-col justify-center items-center overflow-hidden px-12 py-24 text-white"
     >
-      <h2 class="text-3xl font-semibold mb-4">Historia</h2>
-      <p class="">
+      <div class="absolute z-[1] bg-black w-full h-full opacity-50"></div>
+
+      <h2 class="z-[2] text-3xl font-semibold mb-4">Historia</h2>
+
+      <p class="z-[2]">
         En la tierra de Lythria, una profecía perdida habla de un héroe
         destinado a restaurar el equilibrio entre la luz y la oscuridad. Un
         antiguo culto ha despertado fuerzas olvidadas, y el destino del mundo
         depende de tus elecciones. ¿Serás la luz que guíe a Lythria o sucumbirás
         a la sombra?
       </p>
+
+      <div
+        class="absolute inset-0 z-[-1] bg-cover bg-[center_top_-100px]"
+        style="background-image: url('/images/be_ready_2.jpg')"
+      ></div>
     </section>
 
     <section
       id="mechanics"
       class="bg-gray-200 py-12 px-6"
     >
-      <h2 class="text-3xl font-semibold mb-4">Mecánicas del Juego</h2>
+      <h2 class="text-3xl font-semibold mb-6 text-center">
+        Mecánicas del Juego
+      </h2>
 
-      <ul>
-        <li>
-          🌍 <strong>Exploración Dinámica:</strong> Viaja a través de un mundo
-          abierto lleno de ciudades en ruinas, bosques encantados y mazmorras
-          ocultas.
-        </li>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <!-- Карточка 1 -->
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+          <div class="text-4xl">🌍</div>
+          <h3 class="font-bold text-lg mt-3">Exploración Dinámica</h3>
+          <p class="text-gray-600 mt-2">
+            Viaja a través de un mundo abierto lleno de ciudades en ruinas,
+            bosques encantados y mazmorras ocultas.
+          </p>
+        </div>
 
-        <li>
-          ⚔️ <strong>Combate Estratégico:</strong> Domina un sistema de combate
-          en tiempo real con habilidades únicas, combos y magia ancestral.
-        </li>
+        <!-- Карточка 2 -->
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+          <div class="text-4xl">⚔️</div>
+          <h3 class="font-bold text-lg mt-3">Combate Estratégico</h3>
+          <p class="text-gray-600 mt-2">
+            Domina un sistema de combate en tiempo real con habilidades únicas,
+            combos y magia ancestral.
+          </p>
+        </div>
 
-        <li>
-          🎭 <strong>Elecciones con Consecuencias:</strong> Tus decisiones
-          afectan el mundo, los personajes y el desenlace de la historia.
-        </li>
+        <!-- Карточка 3 -->
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+          <div class="text-4xl">🎭</div>
+          <h3 class="font-bold text-lg mt-3">Elecciones con Consecuencias</h3>
+          <p class="text-gray-600 mt-2">
+            Tus decisiones afectan el mundo, los personajes y el desenlace de la
+            historia.
+          </p>
+        </div>
 
-        <li>
-          🛠️ <strong>Personalización de Personajes:</strong> Crea tu héroe con
-          habilidades, armaduras y armas personalizables.
-        </li>
+        <!-- Карточка 4 -->
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+          <div class="text-4xl">🛠️</div>
+          <h3 class="font-bold text-lg mt-3">Personalización de Personajes</h3>
+          <p class="text-gray-600 mt-2">
+            Crea tu héroe con habilidades, armaduras y armas personalizables.
+          </p>
+        </div>
 
-        <li>
-          👥 <strong>Interacción Social:</strong> Forja alianzas con diferentes
-          facciones y personajes que pueden convertirse en aliados... o
-          enemigos.
-        </li>
-      </ul>
+        <!-- Карточка 5 -->
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+          <div class="text-4xl">👥</div>
+          <h3 class="font-bold text-lg mt-3">Interacción Social</h3>
+          <p class="text-gray-600 mt-2">
+            Forja alianzas con diferentes facciones y personajes que pueden
+            convertirse en aliados... o enemigos.
+          </p>
+        </div>
+      </div>
     </section>
 
     <section
-      id="Characters"
+      id="characters"
       class="py-12 px-12"
     >
-      <h2 class="text-3xl font-semibold mb-4">Características Clave</h2>
+      <h2 class="text-3xl font-semibold mb-4 text-center">
+        Características Clave
+      </h2>
 
-      <div class="flex items-center">
-        <div class="flex px-[250px] py-[100px] bg-red-100 justify-center">
-          <span class="bg-black bg-opacity-50 text-white px-4 py-2 rounded-lg">
-            Photo
-          </span>
-        </div>
+      <div class="flex-col md:flex-row flex items-center">
+        <img
+          src="/images/two_warriors.jpg"
+          alt="Key Features"
+          class="w-full md:max-w-lg rounded-lg"
+        />
 
-        <ul class="px-6">
+        <ul class="mt-4 md:mt-0 md:ml-4">
           <li>
             <strong>Gráficos inmersivos</strong> con un estilo visual gótico y
             realista.
           </li>
+
           <li>
             <strong>Banda sonora épica</strong> que transporta al jugador a un
             mundo de misterio y peligro.
           </li>
+
           <li>
             <strong>Modo historia y misiones secundarias</strong> para una
             experiencia rica y variada.
           </li>
+
           <li>
             <strong
               >Disponible para PC y dispositivos móviles, optimizado</strong
@@ -128,7 +252,7 @@
     </section>
 
     <section
-      id="Characters"
+      id="role-playing"
       class="bg-gray-100 py-12 px-6"
     >
       <h2 class="text-3xl font-semibold mb-4">¿Para quién es este juego?</h2>
@@ -141,56 +265,110 @@
 
     <section
       id="subscribe"
-      class="relative flex flex-col justify-center items-center text-center py-[70px] overflow-hidden"
+      class="relative flex flex-col justify-center items-center py-[140px] overflow-hidden px-12"
     >
+      <div class="absolute z-[1] bg-black w-full h-full opacity-50"></div>
+
       <div
-        class="absolute inset-0 bg-cover bg-center bg-red-100 flex items-center justify-center"
-        style="background-image: url('ruta-a-tu-imagen.jpg')"
+        class="absolute inset-0 bg-cover bg-center"
+        style="background-image: url('/images/be_ready_1.jpg')"
+      ></div>
+
+      <div
+        class="z-[2] flex flex-col justify-center items-center text-center text-white"
       >
-        <span class="bg-black bg-opacity-50 text-white px-4 py-2 rounded-lg">
-          Background Photo
-        </span>
+        <h2 class="text-3xl font-semibold mb-4 relative">
+          Únete a la Aventura
+        </h2>
+
+        <p class="mb-8 relative">
+          ¿Estás listo para escribir tu destino? Regístrate ahora y sé el
+          primero en explorar los secretos de Lythria.
+        </p>
+
+        <form
+          onsubmit="this.reset(); return false;"
+          action="#"
+          method="get"
+          class="w-96 justify-center items-center relative"
+        >
+          <div class="mb-4">
+            <input
+              type="email"
+              placeholder="Correo electrónico"
+              name="small_email"
+              class="w-full px-4 py-2 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              required
+            />
+          </div>
+
+          <div>
+            <button
+              type="submit"
+              class="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition duration-300"
+            >
+              Suscribirse
+            </button>
+          </div>
+        </form>
       </div>
-
-      <h2 class="text-3xl font-semibold mb-4 relative">Únete a la Aventura</h2>
-
-      <p class="mb-8 relative">
-        ¿Estás listo para escribir tu destino? Regístrate ahora y sé el primero
-        en explorar los secretos de Lythria.
-      </p>
-
-      <form
-        onsubmit="this.reset(); return false;"
-        action="#"
-        method="get"
-        class="w-96 justify-center items-center relative "
-      >
-        <div class="mb-4">
-          <input
-            type="email"
-            placeholder=",,E-mail"
-            name="small_email"
-            class="w-full px-4 py-2 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-            required
-          />
-        </div>
-
-        <div>
-          <button
-            type="submit"
-            class="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition duration-300"
-          >
-            ,,Suscribirse
-          </button>
-        </div>
-      </form>
     </section>
 
-    <footer class="relative bg-gray-800 py-4 text-center">
-      <p class="text-gray-400">
-        Privacy Policy, Terms and Conditions, Cookie Policy
-      </p>
-      <p class="text-gray-400">&copy; 2025 Sombras del Destino</p>
+    <footer class="relative bg-gray-800 py-6 text-center">
+      <nav class="mb-4">
+        <ul class="flex justify-center space-x-6 text-gray-400 text-lg">
+          <li>
+            <a
+              href="#history"
+              class="hover:text-green-400"
+              >Historia</a
+            >
+          </li>
+          <li>
+            <a
+              href="#mechanics"
+              class="hover:text-green-400"
+              >Mecánica</a
+            >
+          </li>
+          <li>
+            <a
+              href="#characters"
+              class="hover:text-green-400"
+              >Personajes
+            </a>
+          </li>
+          <li>
+            <a
+              href="#role-playing"
+              class="hover:text-green-400"
+              >Juegos de rol</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="mb-2">
+        <a
+          href="#"
+          class="text-gray-400 hover:text-green-400 mx-2"
+          >Privacy Policy</a
+        >
+        <span class="text-gray-500">|</span>
+        <a
+          href="#"
+          class="text-gray-400 hover:text-green-400 mx-2"
+          >Terms and Conditions</a
+        >
+        <span class="text-gray-500">|</span>
+        <a
+          href="#"
+          class="text-gray-400 hover:text-green-400 mx-2"
+          >Cookie Policy</a
+        >
+      </div>
+
+      <p class="text-gray-500">&copy; 2025 Sombras del Destino</p>
     </footer>
   </body>
 </html>
