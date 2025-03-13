@@ -8,13 +8,11 @@ A full-stack project for a role-playing game featuring dynamic storytelling and 
  - Text, Translations & Descriptions: All text, translations, and descriptions for the game have been created with the help of ChatGPT.
  - Images & Backgrounds: All images and background visuals used in this project have been generated using OpenArt.ai.
 
-## Installation
-
 ## Built With
 
 - **Frontend**: HTML, CSS, TailwindCSS
 
-### Setup
+## Setup
 
 Node.js Version: v20.18.1
 
